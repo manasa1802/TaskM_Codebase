@@ -52,6 +52,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                     let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                     let nextVC = storyboard.instantiateViewController(identifier: Constants.myProjectScreenID) as MyProjectsViewController
                     self.navigationController?.pushViewController(nextVC, animated: true)
+//                    (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(nextVC)
                 }
             }
         }
@@ -60,9 +61,10 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBAction func goBackToLoginButtonPressed(_ sender: UIButton) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: Constants.loginScreenId) as! LoginViewController
+//        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(nextViewController)
         self.navigationController?.pushViewController(nextViewController, animated: true)
-        //        self.dismiss(animated: true, completion: nil)
     }
+    
     @IBAction func signUpWithGoogleButtonPressed(_ sender: UIButton) {
         
 ////        credentials are obtained from appdelegate class

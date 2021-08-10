@@ -15,14 +15,21 @@
 		1922982D268BB8B400DAB11A /* CircularTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1922982C268BB8B400DAB11A /* CircularTransition.swift */; };
 		1922982F268BDC0400DAB11A /* MyProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1922982E268BDC0400DAB11A /* MyProjectsViewController.swift */; };
 		194A19FC2686633B005D9ADA /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194A19FB2686633B005D9ADA /* LaunchScreenViewController.swift */; };
-		194A19FE268665D4005D9ADA /* welcometotaskMgif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 194A19FD268665D4005D9ADA /* welcometotaskMgif.gif */; };
 		194A1A00268A55E4005D9ADA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194A19FF268A55E4005D9ADA /* LoginViewController.swift */; };
 		194A1A02268A566D005D9ADA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194A1A01268A566D005D9ADA /* Constants.swift */; };
 		194A1A04268A9EBB005D9ADA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194A1A03268A9EBB005D9ADA /* SignUpViewController.swift */; };
+		195532A826B33F6C008A8A97 /* MyTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195532A726B33F6C008A8A97 /* MyTasksViewController.swift */; };
+		195532AB26B3B9CD008A8A97 /* MyTasksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195532A926B3B9CD008A8A97 /* MyTasksTableViewCell.swift */; };
+		195532AC26B3B9CD008A8A97 /* MyTasksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 195532AA26B3B9CD008A8A97 /* MyTasksTableViewCell.xib */; };
+		195532B426BB212E008A8A97 /* CreateNewTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195532B326BB212E008A8A97 /* CreateNewTaskViewController.swift */; };
 		198B2FED26950C9600986814 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 198B2FEC26950C9500986814 /* GoogleService-Info.plist */; };
 		19A66E8A26A21FB400A636EE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A66E8926A21FB400A636EE /* User.swift */; };
 		19A66E8C26A21FF800A636EE /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A66E8B26A21FF800A636EE /* Project.swift */; };
 		19A66E8E26A2208E00A636EE /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A66E8D26A2208E00A636EE /* Task.swift */; };
+		19E7167226A77433005FEF0B /* TaskBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E7167126A77433005FEF0B /* TaskBrain.swift */; };
+		19E7167426A8AC2E005FEF0B /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E7167326A8AC2E005FEF0B /* Singleton.swift */; };
+		19E7167826A93F29005FEF0B /* myProjectsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19E7167626A93F29005FEF0B /* myProjectsTableViewCell.xib */; };
+		19E7167A26AB54D4005FEF0B /* MyProjectsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E7167926AB54D4005FEF0B /* MyProjectsTableViewCell.swift */; };
 		19F2A8412698F03200C00A0B /* CreateNewProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F2A8402698F03100C00A0B /* CreateNewProjectViewController.swift */; };
 		3BE4CE563E2B1548D55514BF /* Pods_TaskM_Codebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0523C584D07ED29D543EDB82 /* Pods_TaskM_Codebase.framework */; };
 /* End PBXBuildFile section */
@@ -39,14 +46,21 @@
 		1922982C268BB8B400DAB11A /* CircularTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTransition.swift; sourceTree = "<group>"; };
 		1922982E268BDC0400DAB11A /* MyProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProjectsViewController.swift; sourceTree = "<group>"; };
 		194A19FB2686633B005D9ADA /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
-		194A19FD268665D4005D9ADA /* welcometotaskMgif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = welcometotaskMgif.gif; sourceTree = "<group>"; };
 		194A19FF268A55E4005D9ADA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		194A1A01268A566D005D9ADA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		194A1A03268A9EBB005D9ADA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		195532A726B33F6C008A8A97 /* MyTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTasksViewController.swift; sourceTree = "<group>"; };
+		195532A926B3B9CD008A8A97 /* MyTasksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTasksTableViewCell.swift; sourceTree = "<group>"; };
+		195532AA26B3B9CD008A8A97 /* MyTasksTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTasksTableViewCell.xib; sourceTree = "<group>"; };
+		195532B326BB212E008A8A97 /* CreateNewTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewTaskViewController.swift; sourceTree = "<group>"; };
 		198B2FEC26950C9500986814 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		19A66E8926A21FB400A636EE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		19A66E8B26A21FF800A636EE /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		19A66E8D26A2208E00A636EE /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		19E7167126A77433005FEF0B /* TaskBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskBrain.swift; sourceTree = "<group>"; };
+		19E7167326A8AC2E005FEF0B /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		19E7167626A93F29005FEF0B /* myProjectsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = myProjectsTableViewCell.xib; sourceTree = "<group>"; };
+		19E7167926AB54D4005FEF0B /* MyProjectsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProjectsTableViewCell.swift; sourceTree = "<group>"; };
 		19F2A8402698F03100C00A0B /* CreateNewProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewProjectViewController.swift; sourceTree = "<group>"; };
 		581B4222B6C4F5FB0C20F63A /* Pods-TaskM_Codebase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskM_Codebase.release.xcconfig"; path = "Target Support Files/Pods-TaskM_Codebase/Pods-TaskM_Codebase.release.xcconfig"; sourceTree = "<group>"; };
 		75203346568893D9B63B58AF /* Pods-TaskM_Codebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskM_Codebase.debug.xcconfig"; path = "Target Support Files/Pods-TaskM_Codebase/Pods-TaskM_Codebase.debug.xcconfig"; sourceTree = "<group>"; };
@@ -91,7 +105,6 @@
 				190F20BE268542D1006F3440 /* Controller */,
 				190F20AA268541E1006F3440 /* AppDelegate.swift */,
 				194A1A01268A566D005D9ADA /* Constants.swift */,
-				194A19FD268665D4005D9ADA /* welcometotaskMgif.gif */,
 				190F20AC268541E1006F3440 /* SceneDelegate.swift */,
 				190F20B3268541E5006F3440 /* Assets.xcassets */,
 				190F20B8268541E5006F3440 /* Info.plist */,
@@ -103,11 +116,9 @@
 		190F20BE268542D1006F3440 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				194A19FB2686633B005D9ADA /* LaunchScreenViewController.swift */,
-				194A19FF268A55E4005D9ADA /* LoginViewController.swift */,
-				194A1A03268A9EBB005D9ADA /* SignUpViewController.swift */,
-				1922982E268BDC0400DAB11A /* MyProjectsViewController.swift */,
-				19F2A8402698F03100C00A0B /* CreateNewProjectViewController.swift */,
+				195532B026BB0C9B008A8A97 /* LoginScreen */,
+				195532B126BB0CD4008A8A97 /* MyProject */,
+				195532B226BB0CE9008A8A97 /* MyTask */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -117,6 +128,8 @@
 			children = (
 				190F20B5268541E5006F3440 /* LaunchScreen.storyboard */,
 				190F20B0268541E1006F3440 /* Main.storyboard */,
+				19E7167626A93F29005FEF0B /* myProjectsTableViewCell.xib */,
+				195532AA26B3B9CD008A8A97 /* MyTasksTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -127,8 +140,40 @@
 				19A66E8926A21FB400A636EE /* User.swift */,
 				19A66E8B26A21FF800A636EE /* Project.swift */,
 				19A66E8D26A2208E00A636EE /* Task.swift */,
+				19E7167126A77433005FEF0B /* TaskBrain.swift */,
+				19E7167326A8AC2E005FEF0B /* Singleton.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		195532B026BB0C9B008A8A97 /* LoginScreen */ = {
+			isa = PBXGroup;
+			children = (
+				194A19FB2686633B005D9ADA /* LaunchScreenViewController.swift */,
+				194A19FF268A55E4005D9ADA /* LoginViewController.swift */,
+				194A1A03268A9EBB005D9ADA /* SignUpViewController.swift */,
+			);
+			path = LoginScreen;
+			sourceTree = "<group>";
+		};
+		195532B126BB0CD4008A8A97 /* MyProject */ = {
+			isa = PBXGroup;
+			children = (
+				1922982E268BDC0400DAB11A /* MyProjectsViewController.swift */,
+				19F2A8402698F03100C00A0B /* CreateNewProjectViewController.swift */,
+				19E7167926AB54D4005FEF0B /* MyProjectsTableViewCell.swift */,
+			);
+			path = MyProject;
+			sourceTree = "<group>";
+		};
+		195532B226BB0CE9008A8A97 /* MyTask */ = {
+			isa = PBXGroup;
+			children = (
+				195532A726B33F6C008A8A97 /* MyTasksViewController.swift */,
+				195532A926B3B9CD008A8A97 /* MyTasksTableViewCell.swift */,
+				195532B326BB212E008A8A97 /* CreateNewTaskViewController.swift */,
+			);
+			path = MyTask;
 			sourceTree = "<group>";
 		};
 		30222D1A708F1C68ACDF2CC3 /* Frameworks */ = {
@@ -210,9 +255,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				190F20B7268541E5006F3440 /* LaunchScreen.storyboard in Resources */,
+				19E7167826A93F29005FEF0B /* myProjectsTableViewCell.xib in Resources */,
 				190F20B4268541E5006F3440 /* Assets.xcassets in Resources */,
 				198B2FED26950C9600986814 /* GoogleService-Info.plist in Resources */,
-				194A19FE268665D4005D9ADA /* welcometotaskMgif.gif in Resources */,
+				195532AC26B3B9CD008A8A97 /* MyTasksTableViewCell.xib in Resources */,
 				190F20B2268541E1006F3440 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,12 +330,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				1922982F268BDC0400DAB11A /* MyProjectsViewController.swift in Sources */,
+				195532A826B33F6C008A8A97 /* MyTasksViewController.swift in Sources */,
+				19E7167426A8AC2E005FEF0B /* Singleton.swift in Sources */,
+				19E7167226A77433005FEF0B /* TaskBrain.swift in Sources */,
 				194A1A04268A9EBB005D9ADA /* SignUpViewController.swift in Sources */,
 				190F20AB268541E1006F3440 /* AppDelegate.swift in Sources */,
 				1922982D268BB8B400DAB11A /* CircularTransition.swift in Sources */,
+				19E7167A26AB54D4005FEF0B /* MyProjectsTableViewCell.swift in Sources */,
+				195532AB26B3B9CD008A8A97 /* MyTasksTableViewCell.swift in Sources */,
 				19A66E8E26A2208E00A636EE /* Task.swift in Sources */,
 				194A19FC2686633B005D9ADA /* LaunchScreenViewController.swift in Sources */,
 				194A1A00268A55E4005D9ADA /* LoginViewController.swift in Sources */,
+				195532B426BB212E008A8A97 /* CreateNewTaskViewController.swift in Sources */,
 				190F20AD268541E1006F3440 /* SceneDelegate.swift in Sources */,
 				19A66E8C26A21FF800A636EE /* Project.swift in Sources */,
 				194A1A02268A566D005D9ADA /* Constants.swift in Sources */,

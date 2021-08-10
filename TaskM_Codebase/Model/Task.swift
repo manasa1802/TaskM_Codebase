@@ -12,7 +12,7 @@ struct Task {
     var taskId: String
     var taskName: String
     var taskDescription: String
-    var duration: Int
-    var projectId: String
+    var taskDocumentId: String
+    var status: String
     
 }

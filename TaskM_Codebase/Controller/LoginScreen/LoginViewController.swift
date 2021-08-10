@@ -41,9 +41,15 @@ class LoginViewController: UIViewController, UIViewControllerTransitioningDelega
                 if let err = error{
                     print(err)
                 }else{
+                    
+                    UserDefaults.standard.set(true, forKey: "IsLoggedIn")
+                    UserDefaults.standard.synchronize() // to save the default value in the device
+            
                     let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                     let nextViewController = storyBoard.instantiateViewController(withIdentifier: Constants.myProjectScreenID) as! MyProjectsViewController
+//                    (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(nextViewController)
                     self.navigationController?.pushViewController(nextViewController, animated: true)
+                   
                 }
             }
         }
@@ -68,6 +74,11 @@ class LoginViewController: UIViewController, UIViewControllerTransitioningDelega
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: Constants.signUpId) as! SignUpViewController
         self.navigationController?.pushViewController(nextViewController, animated: true)
+        
+//        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+//        let nextViewController = storyBoard.instantiateViewController(withIdentifier: Constants.myProjectScreenID) as! MyProjectsViewController
+        
+//        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(nextViewController)
     }
     
 }

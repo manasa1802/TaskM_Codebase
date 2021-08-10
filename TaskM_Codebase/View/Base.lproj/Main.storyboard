@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VPz-Jf-HaY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yhb-dL-bsw">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -36,7 +36,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="962" y="115"/>
+            <point key="canvasLocation" x="2723" y="115"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="FU2-2b-1ah">
@@ -170,7 +170,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VPh-oA-87j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1682.608695652174" y="114.50892857142857"/>
+            <point key="canvasLocation" x="3502.898550724638" y="114.50892857142857"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="L10-Sj-8Y8">
@@ -306,7 +306,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dcs-cJ-ttT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2379.7101449275365" y="114.50892857142857"/>
+            <point key="canvasLocation" x="4200" y="114.50892857142857"/>
         </scene>
         <!--My Projects View Controller-->
         <scene sceneID="7yQ-nW-P3S">
@@ -337,7 +337,7 @@
                                             </segue>
                                         </connections>
                                     </button>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9eY-2T-6ik">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9eY-2T-6ik">
                                         <rect key="frame" x="0.0" y="0.0" width="392" height="626"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -352,6 +352,17 @@
                                 <color key="textColor" name="BlueAppColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zx-Db-C3A">
+                                <rect key="frame" x="337" y="107" width="72" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="SignOut">
+                                    <color key="titleColor" name="BlueAppColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="signOutButtonPressed:" destination="nLJ-G0-rMD" eventType="touchUpInside" id="o5h-jF-TZx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -367,11 +378,12 @@
                         <outlet property="addProjectButton" destination="UOR-bn-uDd" id="30F-n5-DGY"/>
                         <outlet property="myProjectsTableView" destination="9eY-2T-6ik" id="FX3-mK-f2e"/>
                         <outlet property="myProjectsView" destination="EXP-bt-jMw" id="Smn-UA-xWb"/>
+                        <outlet property="signOutButton" destination="1zx-Db-C3A" id="Dvs-O6-UQb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vDf-Lf-p9r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2058" y="855"/>
+            <point key="canvasLocation" x="1957.9710144927537" y="918.75"/>
         </scene>
         <!--Create New Project View Controller-->
         <scene sceneID="hy4-9i-C8g">
@@ -382,23 +394,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1d6-fh-exM">
-                                <rect key="frame" x="37" y="215" width="341" height="419"/>
+                                <rect key="frame" x="40" y="230" width="333" height="375"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FsO-14-esH">
-                                        <rect key="frame" x="32" y="290" width="285" height="52"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Project Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="msW-Hy-jxA">
+                                        <rect key="frame" x="8" y="100" width="312" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" name="BlueAppColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FS0-UX-UjU">
+                                        <rect key="frame" x="8" y="134" width="312" height="1"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" name="BlueAppColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                        <state key="normal" title="Create">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="createProjectButtonPressed:" destination="0Zv-WS-NA5" eventType="touchUpInside" id="aFC-Rl-3Sh"/>
-                                        </connections>
-                                    </button>
+                                    </view>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Project Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dan-8T-Mtg">
+                                        <rect key="frame" x="8" y="170" width="312" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" name="BlueAppColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zTD-ad-2TY">
+                                        <rect key="frame" x="8" y="208" width="312" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" name="BlueAppColor"/>
+                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8r-sm-rww">
-                                        <rect key="frame" x="149" y="356" width="50" height="32"/>
+                                        <rect key="frame" x="141" y="311" width="50" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="Cancel">
@@ -408,42 +434,204 @@
                                             <action selector="cancelButtonPressed:" destination="0Zv-WS-NA5" eventType="touchUpInside" id="NxP-9d-RBe"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Project Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="msW-Hy-jxA">
-                                        <rect key="frame" x="8" y="56" width="333" height="37"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New Project" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3r6-Xq-lvR">
+                                        <rect key="frame" x="102" y="28" width="143" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                        <color key="textColor" name="BlueAppColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FsO-14-esH">
+                                        <rect key="frame" x="93" y="268" width="146" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" name="BlueAppColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="CREATE">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="createProjectButtonPressed:" destination="0Zv-WS-NA5" eventType="touchUpInside" id="aFC-Rl-3Sh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="GreenAppColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JUe-QQ-OQs"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Lav-9j-wBq"/>
+                    <connections>
+                        <outlet property="createButton" destination="FsO-14-esH" id="XW6-xg-1aL"/>
+                        <outlet property="createProjectView" destination="1d6-fh-exM" id="0Fb-f5-3Eg"/>
+                        <outlet property="fullView" destination="c8G-ok-QPj" id="qV2-x3-hhh"/>
+                        <outlet property="projectDescriptionTextField" destination="dan-8T-Mtg" id="DfD-eG-D2X"/>
+                        <outlet property="projectNameTextField" destination="msW-Hy-jxA" id="pbb-QL-Tii"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mHG-0K-ek0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2842.0289855072465" y="918.75"/>
+        </scene>
+        <!--My Tasks View Controller-->
+        <scene sceneID="HY3-Yw-K8e">
+            <objects>
+                <viewController storyboardIdentifier="MyTaskStoryboardID" id="OOj-sh-pGY" customClass="MyTasksViewController" customModule="Task__M" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nMU-bG-o6d">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="v7e-28-b7F">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MY TASKS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YVU-xK-CiI">
+                                <rect key="frame" x="20" y="75" width="211" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kec-b6-eoa">
+                                <rect key="frame" x="10" y="144" width="394" height="705"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WkY-Pk-czb">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="624"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCQ-2p-Mje">
+                                        <rect key="frame" x="319" y="640" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" name="BlueAppColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="+">
+                                            <color key="titleColor" name="whiteAppColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addNewTaskButtonPressed:" destination="OOj-sh-pGY" eventType="touchUpInside" id="g2F-JL-WsI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d37-Nv-kSi">
+                                <rect key="frame" x="326" y="75" width="68" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="REPORTS">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="reportsButtonPressed:" destination="OOj-sh-pGY" eventType="touchUpInside" id="74y-UR-UPL"/>
+                                    <segue destination="MzR-BV-Iud" kind="show" id="FZ0-qD-9TY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="v7e-28-b7F" firstAttribute="top" secondItem="nMU-bG-o6d" secondAttribute="top" id="3Fp-Wo-U5v"/>
+                            <constraint firstItem="v7e-28-b7F" firstAttribute="trailing" secondItem="Sxv-Yq-upm" secondAttribute="trailing" id="YhD-Uu-Ukq"/>
+                            <constraint firstAttribute="bottom" secondItem="v7e-28-b7F" secondAttribute="bottom" id="Zhh-cE-0oC"/>
+                            <constraint firstItem="v7e-28-b7F" firstAttribute="leading" secondItem="Sxv-Yq-upm" secondAttribute="leading" id="i0Z-dd-HP5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Sxv-Yq-upm"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="IMh-HR-E28">
+                        <barButtonItem key="backBarButtonItem" title="My Task" id="qTk-ic-coE"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addNewTaskButton" destination="cCQ-2p-Mje" id="7Tf-rz-oje"/>
+                        <outlet property="myTasksTableView" destination="WkY-Pk-czb" id="AO4-eh-t6V"/>
+                        <outlet property="myTasksView" destination="kec-b6-eoa" id="N9s-2N-dPv"/>
+                        <outlet property="reportsButton" destination="d37-Nv-kSi" id="rf7-7j-eh2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dqM-4Q-1OT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2380" y="1652"/>
+        </scene>
+        <!--Create New Task View Controller-->
+        <scene sceneID="2b3-xv-ldX">
+            <objects>
+                <viewController storyboardIdentifier="CreateTaskID" id="df4-MB-Est" customClass="CreateNewTaskViewController" customModule="Task__M" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EXX-bh-RSJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aXX-Qi-eXv">
+                                <rect key="frame" x="41" y="180" width="333" height="430"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Task Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UCO-3w-6a7">
+                                        <rect key="frame" x="8" y="100" width="312" height="37"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" name="BlueAppColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FS0-UX-UjU">
-                                        <rect key="frame" x="8" y="92" width="333" height="1"/>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ntw-58-puK">
+                                        <rect key="frame" x="8" y="134" width="312" height="1"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" name="BlueAppColor"/>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Project Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dan-8T-Mtg">
-                                        <rect key="frame" x="8" y="129" width="333" height="37"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Task Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="75L-by-Mhl">
+                                        <rect key="frame" x="8" y="170" width="312" height="37"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" name="BlueAppColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zTD-ad-2TY">
-                                        <rect key="frame" x="8" y="166" width="333" height="1"/>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mx2-lP-r3X">
+                                        <rect key="frame" x="8" y="208" width="312" height="1"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" name="BlueAppColor"/>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Duration" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rjW-Ch-2Em">
-                                        <rect key="frame" x="8" y="207" width="333" height="42"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BrM-W7-Ad9">
+                                        <rect key="frame" x="108" y="30" width="113" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
                                         <color key="textColor" name="BlueAppColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2BC-q3-gQy">
+                                        <rect key="frame" x="139" y="362" width="50" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" name="BlueAppColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelButtonPressed:" destination="df4-MB-Est" eventType="touchUpInside" id="VK5-sD-PNI"/>
+                                            <action selector="cancelButtonPressed:" destination="0Zv-WS-NA5" eventType="touchUpInside" id="eAI-kL-WpB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGZ-MT-IPH">
+                                        <rect key="frame" x="91" y="319" width="146" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" name="BlueAppColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5eh-ro-x7l">
-                                        <rect key="frame" x="8" y="244" width="333" height="1"/>
+                                        <state key="normal" title="CREATE">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="createProjectButtonPressed:" destination="0Zv-WS-NA5" eventType="touchUpInside" id="Yqs-0h-LRk"/>
+                                            <action selector="createTaskButtonPressed:" destination="df4-MB-Est" eventType="touchUpInside" id="pjH-kK-iUm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGN-XZ-H2J">
+                                        <rect key="frame" x="10" y="241" width="298" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="Status">
+                                            <color key="titleColor" name="BlueAppColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="statusButtonPressed:" destination="df4-MB-Est" eventType="touchUpInside" id="nHa-be-Wls"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tUn-rD-eWM">
+                                        <rect key="frame" x="10" y="280" width="312" height="1"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" name="BlueAppColor"/>
                                     </view>
@@ -451,38 +639,72 @@
                                 <color key="backgroundColor" name="GreenAppColor"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="JUe-QQ-OQs"/>
+                        <viewLayoutGuide key="safeArea" id="vuQ-0y-HxG"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Lav-9j-wBq"/>
                     <connections>
-                        <outlet property="createButton" destination="FsO-14-esH" id="XW6-xg-1aL"/>
-                        <outlet property="createProjectView" destination="1d6-fh-exM" id="0Fb-f5-3Eg"/>
-                        <outlet property="projectDescriptionTextField" destination="dan-8T-Mtg" id="DfD-eG-D2X"/>
-                        <outlet property="projectNameTextField" destination="msW-Hy-jxA" id="pbb-QL-Tii"/>
+                        <outlet property="createTaskButton" destination="DGZ-MT-IPH" id="B07-om-AH2"/>
+                        <outlet property="statusButton" destination="UGN-XZ-H2J" id="4gx-PZ-Bw1"/>
+                        <outlet property="taskDescriptionTextField" destination="75L-by-Mhl" id="f8f-8L-1QS"/>
+                        <outlet property="taskNameTextField" destination="UCO-3w-6a7" id="wMo-qx-pkw"/>
+                        <outlet property="taskView" destination="aXX-Qi-eXv" id="vIl-th-P3Q"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mHG-0K-ek0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LgZ-HX-wfW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2909" y="854"/>
+            <point key="canvasLocation" x="3259" y="2108"/>
+        </scene>
+        <!--Item2-->
+        <scene sceneID="aXS-Rr-qdp">
+            <objects>
+                <viewController id="MzR-BV-Iud" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8a0-om-QJV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="F9B-bF-knZ">
+                                <rect key="frame" x="0.0" y="-44" width="414" height="935"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reports page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8X-O5-Wi1">
+                                <rect key="frame" x="124" y="121" width="167" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="F9B-bF-knZ" firstAttribute="top" secondItem="Ln7-CY-oXE" secondAttribute="top" constant="-44" id="Ci2-N0-Gdm"/>
+                            <constraint firstItem="Ln7-CY-oXE" firstAttribute="bottom" secondItem="F9B-bF-knZ" secondAttribute="bottom" constant="-83" id="Vr0-dg-Jgq"/>
+                            <constraint firstItem="Ln7-CY-oXE" firstAttribute="trailing" secondItem="F9B-bF-knZ" secondAttribute="trailing" id="h4X-gM-0my"/>
+                            <constraint firstItem="F9B-bF-knZ" firstAttribute="leading" secondItem="Ln7-CY-oXE" secondAttribute="leading" id="x7Y-Lq-JB0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ln7-CY-oXE"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item2" id="0Wc-L1-cGw"/>
+                    <navigationItem key="navigationItem" id="UsW-1d-1s9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CeJ-gn-2LA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3677" y="1473"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="F24-yv-qTM">
+        <scene sceneID="gY4-9D-bSe">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VPz-Jf-HaY" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yhb-dL-bsw" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zFL-8F-ELq">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1Q2-Qq-M0b">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ubW-X3-ROM"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fTl-u6-FOW"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Flx-cs-e55" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jsB-oJ-Ade" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
+            <point key="canvasLocation" x="1871.0144927536232" y="114.50892857142857"/>
         </scene>
     </scenes>
     <resources>

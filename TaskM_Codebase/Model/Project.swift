@@ -12,6 +12,8 @@ struct Project {
     var projectId: String
     var projectName: String
     var projectDescription: String
-    var date: Date
-    var userId: String
+    var documentId: String
+//    var date: Date
+    
+    
 }
