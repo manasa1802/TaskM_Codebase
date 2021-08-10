@@ -47,15 +47,22 @@ class MyProjectsViewController: UIViewController {
         UserDefaults.standard.set(false, forKey: "IsLoggedIn")
         UserDefaults.standard.synchronize()
         
+        let firebaseAuth = Auth.auth()
+        do {
+          try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+          print("Error signing out: %@", signOutError)
+        }
+        
+        
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: Constants.loginScreenId) as! LoginViewController
-              
         
 //        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(nextViewController)
         self.navigationController?.pushViewController(nextViewController, animated: true)
         
 //        do additional signout stuffs for firebase signout
-
+        
     }
     
     func loadAllProjects(){
