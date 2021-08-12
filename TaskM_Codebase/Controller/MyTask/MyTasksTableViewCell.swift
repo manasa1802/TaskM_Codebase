@@ -38,4 +38,8 @@ class MyTasksTableViewCell: UITableViewCell {
         }
     }
     
+    func editStaus(status: String){
+        
+    }
+    
 }

@@ -28,6 +28,7 @@ class CreateNewTaskViewController: UIViewController, UITextFieldDelegate {
         
         taskNameTextField.delegate = self
         taskDescriptionTextField.delegate = self
+        statusButton.titleLabel?.text = "Pending"
 //        something about button here
     }
     
@@ -37,14 +38,20 @@ class CreateNewTaskViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func statusButtonPressed(_ sender: UIButton) {
-        
+       if sender.titleLabel?.text == "Pending"{
+            statusButton.setTitle("In progress", for: .normal)
+        }else if sender.titleLabel?.text == "In progress"{
+            statusButton.setTitle("Complete", for: .normal)
+        }else if sender.titleLabel?.text == "Complete"{
+            statusButton.setTitle("Pending", for: .normal)
+        }
     }
     
     @IBAction func createTaskButtonPressed(_ sender: UIButton) {
         if let taskName = taskNameTextField.text, let taskDescription = taskDescriptionTextField.text, let status = statusButton.titleLabel?.text{
                 
             let taskID = Singleton.sharedInstance.getTaskId()
-        db.collection(Constants.ProjectList.collectionName).document(currentDoc).collection(Constants.TaskList.collectionName).addDocument(data: [Constants.TaskList.taskName: taskName,                                                          Constants.TaskList.taskDescription: taskDescription, Constants.TaskList.status: status, Constants.TaskList.taskDate: Date().timeIntervalSince1970, Constants.TaskList.taskId: taskID]){ (Error) in
+            db.collection(Constants.ProjectList.collectionName).document(currentDoc).collection(Constants.TaskList.collectionName).addDocument(data: [Constants.TaskList.taskName: taskName,                                                          Constants.TaskList.taskDescription: taskDescription, Constants.TaskList.status: status, Constants.TaskList.taskDate: Date().timeIntervalSince1970, Constants.TaskList.taskId: taskID, Constants.TaskList.status: status]){ (Error) in
                 
                 if let err = Error{
                     print("error saving data \(err)")
