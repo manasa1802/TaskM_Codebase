@@ -95,6 +95,8 @@ extension MyTasksViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.myTaskCellId, for: indexPath) as! MyTasksTableViewCell
+        cell.taskCellName.text = myTaskList[indexPath.row].taskName
+        cell.taskIdLabel.text = myTaskList[indexPath.row].taskId
         return cell
     }
     
@@ -107,7 +109,6 @@ extension MyTasksViewController: UITableViewDelegate, UITableViewDataSource{
         //        delete cells here
         if (editingStyle == .delete){
             let doc = myTaskList[indexPath.row].taskDocumentId
-            
             db.collection(Constants.ProjectList.collectionName).document(currentDocumentID).collection(Constants.TaskList.collectionName).document(doc).delete { (error) in
                 if let err = error{
                     print("Error deleting \(err)")
