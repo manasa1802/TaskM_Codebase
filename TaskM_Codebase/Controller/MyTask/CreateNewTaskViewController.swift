@@ -38,6 +38,8 @@ class CreateNewTaskViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func statusButtonPressed(_ sender: UIButton) {
+        print(sender.titleLabel?.text!)
+        
        if sender.titleLabel?.text == "Pending"{
             statusButton.setTitle("In progress", for: .normal)
         }else if sender.titleLabel?.text == "In progress"{
@@ -51,7 +53,8 @@ class CreateNewTaskViewController: UIViewController, UITextFieldDelegate {
         if let taskName = taskNameTextField.text, let taskDescription = taskDescriptionTextField.text, let status = statusButton.titleLabel?.text{
                 
             let taskID = Singleton.sharedInstance.getTaskId()
-            db.collection(Constants.ProjectList.collectionName).document(currentDoc).collection(Constants.TaskList.collectionName).addDocument(data: [Constants.TaskList.taskName: taskName,                                                          Constants.TaskList.taskDescription: taskDescription, Constants.TaskList.status: status, Constants.TaskList.taskDate: Date().timeIntervalSince1970, Constants.TaskList.taskId: taskID, Constants.TaskList.status: status]){ (Error) in
+            db.collection(Constants.ProjectList.collectionName).document(currentDoc).collection(Constants.TaskList.collectionName).addDocument(data: [Constants.TaskList.taskName: taskName,
+                                                                                                                Constants.TaskList.taskDescription: taskDescription, Constants.TaskList.status: status, Constants.TaskList.taskDate: Date().timeIntervalSince1970, Constants.TaskList.taskId: taskID]){ (Error) in
                 
                 if let err = Error{
                     print("error saving data \(err)")
