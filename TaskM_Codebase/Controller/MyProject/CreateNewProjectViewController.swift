@@ -32,9 +32,7 @@ class CreateNewProjectViewController: UIViewController, UITextFieldDelegate{
 //        text field delegate is set to self
         projectNameTextField.delegate = self 
         projectDescriptionTextField.delegate = self
-        
-//        background view blur - to do
-        
+
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

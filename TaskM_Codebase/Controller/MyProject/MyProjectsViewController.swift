@@ -18,16 +18,17 @@ class MyProjectsViewController: UIViewController {
     var myProjectList: [Project] = []
     var db = Firestore.firestore()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         myProjectsView.layer.cornerRadius = 15
         myProjectsTableView.layer.cornerRadius = 15
         addProjectButton.layer.cornerRadius = 25
-        
+      
 //      load existing projects
         loadAllProjects()
-
+        
         myProjectsTableView.register(UINib(nibName: "myProjectsTableViewCell", bundle: nil), forCellReuseIdentifier: Constants.projectCellId)
         myProjectsTableView.delegate = self
         myProjectsTableView.dataSource = self
@@ -47,6 +48,7 @@ class MyProjectsViewController: UIViewController {
         UserDefaults.standard.set(false, forKey: "IsLoggedIn")
         UserDefaults.standard.synchronize()
         
+//        do additional signout stuffs for firebase signout
         let firebaseAuth = Auth.auth()
         do {
           try firebaseAuth.signOut()
@@ -54,14 +56,11 @@ class MyProjectsViewController: UIViewController {
           print("Error signing out: %@", signOutError)
         }
         
-        
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: Constants.loginScreenId) as! LoginViewController
         
 //        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(nextViewController)
         self.navigationController?.pushViewController(nextViewController, animated: true)
-        
-//        do additional signout stuffs for firebase signout
         
     }
     
@@ -105,8 +104,6 @@ extension MyProjectsViewController: UITableViewDataSource, UITableViewDelegate{
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.projectCellId, for: indexPath) as! MyProjectsTableViewCell
         cell.projectNameLabel.text = myProjectList[indexPath.row].projectName
         cell.projectDescriptionLabel.text = myProjectList[indexPath.row].projectDescription
-        
-//        cell.projectNameLabel.text = "Project one"
         return cell
     }
     
@@ -116,7 +113,7 @@ extension MyProjectsViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
-//        delete cells here
+        //        delete cells here
         if (editingStyle == .delete){
             let doc = myProjectList[indexPath.row].documentId
             
@@ -132,17 +129,14 @@ extension MyProjectsViewController: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-//        take hold of the current doc id and store tasks under the same id (sub collection)
+
         let doc = myProjectList[indexPath.row].documentId
-        
         //        load a new controller
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: Constants.myTasksStoryboardId) as! MyTasksViewController
         nextViewController.currentDocumentID = doc
         self.navigationController?.pushViewController(nextViewController, animated: true)
 //        self.present(nextViewController, animated: true, completion: nil)
-        
         
     }
 }

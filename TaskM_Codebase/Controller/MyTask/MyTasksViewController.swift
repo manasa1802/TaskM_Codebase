@@ -9,6 +9,10 @@
 import UIKit
 import Firebase
 
+protocol MyTaskDelegate {
+    func updateStatus(docId: String, updateTo: String)
+}
+
 class MyTasksViewController: UIViewController {
     @IBOutlet weak var myTasksView: UIView!
     @IBOutlet weak var myTasksTableView: UITableView!
@@ -21,6 +25,8 @@ class MyTasksViewController: UIViewController {
     
     var myTaskList: [Task] = []
     var cellsNum = 3
+    
+    var delegate: MyTaskDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,6 +78,10 @@ class MyTasksViewController: UIViewController {
         }
     }
 
+    func updateTask(){
+        delegate?.updateStatus(docId: "doc id", updateTo: "new string")
+    }
+    
     @IBAction func addNewTaskButtonPressed(_ sender: UIButton) {
         //        load create task vc programatically, so that you can have a hold of the doc id
 
@@ -87,6 +97,14 @@ class MyTasksViewController: UIViewController {
     
 }
 
+extension MyTasksViewController: MyTaskDelegate{
+    func updateStatus(docId: String, updateTo: String) {
+        
+    }
+    
+    
+}
+
 extension MyTasksViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print(myTaskList.count)
@@ -97,6 +115,9 @@ extension MyTasksViewController: UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.myTaskCellId, for: indexPath) as! MyTasksTableViewCell
         cell.taskCellName.text = myTaskList[indexPath.row].taskName
         cell.taskIdLabel.text = myTaskList[indexPath.row].taskId
+        cell.currentTaskDocId = myTaskList[indexPath.row].taskDocumentId
+        cell.statusButton.titleLabel?.text = myTaskList[indexPath.row].status
+        cell.currentProjectDocId = self.currentDocumentID
         return cell
     }
     
