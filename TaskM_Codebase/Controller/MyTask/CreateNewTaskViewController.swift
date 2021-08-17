@@ -28,7 +28,7 @@ class CreateNewTaskViewController: UIViewController, UITextFieldDelegate {
         
         taskNameTextField.delegate = self
         taskDescriptionTextField.delegate = self
-        statusButton.titleLabel?.text = "Pending"
+        statusButton.titleLabel?.text = Constants.Status.pending
 //        something about button here
     }
     
@@ -38,14 +38,13 @@ class CreateNewTaskViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func statusButtonPressed(_ sender: UIButton) {
-        print(sender.titleLabel?.text!)
         
-       if sender.titleLabel?.text == "Pending"{
-            statusButton.setTitle("In progress", for: .normal)
-        }else if sender.titleLabel?.text == "In progress"{
-            statusButton.setTitle("Complete", for: .normal)
-        }else if sender.titleLabel?.text == "Complete"{
-            statusButton.setTitle("Pending", for: .normal)
+        if sender.titleLabel?.text == Constants.Status.pending{
+            statusButton.setTitle(Constants.Status.inProgress, for: .normal)
+        }else if sender.titleLabel?.text == Constants.Status.inProgress{
+            statusButton.setTitle(Constants.Status.complete, for: .normal)
+        }else if sender.titleLabel?.text == Constants.Status.complete{
+            statusButton.setTitle(Constants.Status.pending, for: .normal)
         }
     }
     

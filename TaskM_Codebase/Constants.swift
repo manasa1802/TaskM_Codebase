@@ -50,4 +50,10 @@ struct Constants {
         
     }
     
+    struct Status {
+        static let pending = "Pending"
+        static let inProgress = "In Progress"
+        static let complete = "Complete"
+    }
+    
 }

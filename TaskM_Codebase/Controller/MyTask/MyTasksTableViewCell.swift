@@ -34,12 +34,14 @@ class MyTasksTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     @IBAction func statusButtonPressed(_ sender: UIButton) {
-        if sender.titleLabel?.text == "Pending"{
-            statusButton.setTitle("In Progress", for: .normal)
-            updateStatus(updateTo:"In Progress")
-        }else if sender.titleLabel?.text == "In Progress"{
-            statusButton.setTitle("Complete", for: .normal)
-            updateStatus(updateTo: "Complete")
+        if sender.titleLabel?.text == Constants.Status.pending{
+            statusButton.setTitle(Constants.Status.inProgress, for: .normal)
+            updateStatus(updateTo:Constants.Status.inProgress)
+            statusButton.backgroundColor = #colorLiteral(red: 1, green: 0.8240020871, blue: 0.4450384974, alpha: 1)
+        }else if sender.titleLabel?.text == Constants.Status.inProgress{
+            statusButton.setTitle(Constants.Status.complete, for: .normal)
+            updateStatus(updateTo: Constants.Status.complete)
+            statusButton.backgroundColor = #colorLiteral(red: 0.764465034, green: 0.9612405896, blue: 0.5153101087, alpha: 1)
         }
     }
     

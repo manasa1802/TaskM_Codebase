@@ -20,6 +20,12 @@ class MyTasksViewController: UIViewController {
     
     @IBOutlet weak var reportsButton: UIButton!
     
+    var buttonColor: [String: UIColor] = [
+        Constants.Status.pending: #colorLiteral(red: 0.9619401097, green: 0.3648380637, blue: 0.4741904736, alpha: 1),
+        Constants.Status.inProgress: #colorLiteral(red: 1, green: 0.8240020871, blue: 0.4450384974, alpha: 1),
+        Constants.Status.complete: #colorLiteral(red: 0.764465034, green: 0.9612405896, blue: 0.5153101087, alpha: 1)]
+
+    
     var currentDocumentID = ""
     var db = Firestore.firestore()
     
@@ -119,6 +125,8 @@ extension MyTasksViewController: UITableViewDelegate, UITableViewDataSource{
         cell.statusButton.setTitle(myTaskList[indexPath.row].status, for: .normal)
 //        cell.statusButton.setImage(#imageLiteral(resourceName: "pending"), for: .normal)
 //        change status button color here
+        print(myTaskList[indexPath.row].status)
+        cell.statusButton.backgroundColor = buttonColor[myTaskList[indexPath.row].status]
         cell.currentProjectDocId = self.currentDocumentID
         return cell
     }
