@@ -10,5 +10,7 @@ target 'TaskM_Codebase' do
    pod 'Firebase/Auth'
    pod 'Firebase/Firestore'
    pod 'GoogleSignIn'
+   
+   pod 'Charts'
 
 end

@@ -12,7 +12,6 @@
 		190F20B2268541E1006F3440 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 190F20B0268541E1006F3440 /* Main.storyboard */; };
 		190F20B4268541E5006F3440 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 190F20B3268541E5006F3440 /* Assets.xcassets */; };
 		190F20B7268541E5006F3440 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 190F20B5268541E5006F3440 /* LaunchScreen.storyboard */; };
-		1922982D268BB8B400DAB11A /* CircularTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1922982C268BB8B400DAB11A /* CircularTransition.swift */; };
 		1922982F268BDC0400DAB11A /* MyProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1922982E268BDC0400DAB11A /* MyProjectsViewController.swift */; };
 		194A19FC2686633B005D9ADA /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194A19FB2686633B005D9ADA /* LaunchScreenViewController.swift */; };
 		194A1A00268A55E4005D9ADA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194A19FF268A55E4005D9ADA /* LoginViewController.swift */; };
@@ -26,6 +25,9 @@
 		19A66E8A26A21FB400A636EE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A66E8926A21FB400A636EE /* User.swift */; };
 		19A66E8C26A21FF800A636EE /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A66E8B26A21FF800A636EE /* Project.swift */; };
 		19A66E8E26A2208E00A636EE /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A66E8D26A2208E00A636EE /* Task.swift */; };
+		19C3590E26D8309B00293E47 /* ReportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C3590D26D8309B00293E47 /* ReportsViewController.swift */; };
+		19C3591026D83C1700293E47 /* ChartProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C3590F26D83C1700293E47 /* ChartProgress.swift */; };
+		19C3591226D84E4A00293E47 /* CircularTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C3591126D84E4A00293E47 /* CircularTransition.swift */; };
 		19E7167226A77433005FEF0B /* TaskBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E7167126A77433005FEF0B /* TaskBrain.swift */; };
 		19E7167426A8AC2E005FEF0B /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E7167326A8AC2E005FEF0B /* Singleton.swift */; };
 		19E7167826A93F29005FEF0B /* myProjectsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19E7167626A93F29005FEF0B /* myProjectsTableViewCell.xib */; };
@@ -43,7 +45,6 @@
 		190F20B3268541E5006F3440 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		190F20B6268541E5006F3440 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		190F20B8268541E5006F3440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1922982C268BB8B400DAB11A /* CircularTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTransition.swift; sourceTree = "<group>"; };
 		1922982E268BDC0400DAB11A /* MyProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProjectsViewController.swift; sourceTree = "<group>"; };
 		194A19FB2686633B005D9ADA /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		194A19FF268A55E4005D9ADA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +58,9 @@
 		19A66E8926A21FB400A636EE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		19A66E8B26A21FF800A636EE /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		19A66E8D26A2208E00A636EE /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		19C3590D26D8309B00293E47 /* ReportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsViewController.swift; sourceTree = "<group>"; };
+		19C3590F26D83C1700293E47 /* ChartProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartProgress.swift; sourceTree = "<group>"; };
+		19C3591126D84E4A00293E47 /* CircularTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularTransition.swift; sourceTree = "<group>"; };
 		19E7167126A77433005FEF0B /* TaskBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskBrain.swift; sourceTree = "<group>"; };
 		19E7167326A8AC2E005FEF0B /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		19E7167626A93F29005FEF0B /* myProjectsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = myProjectsTableViewCell.xib; sourceTree = "<group>"; };
@@ -106,9 +110,9 @@
 				190F20AA268541E1006F3440 /* AppDelegate.swift */,
 				194A1A01268A566D005D9ADA /* Constants.swift */,
 				190F20AC268541E1006F3440 /* SceneDelegate.swift */,
+				19C3591126D84E4A00293E47 /* CircularTransition.swift */,
 				190F20B3268541E5006F3440 /* Assets.xcassets */,
 				190F20B8268541E5006F3440 /* Info.plist */,
-				1922982C268BB8B400DAB11A /* CircularTransition.swift */,
 			);
 			path = TaskM_Codebase;
 			sourceTree = "<group>";
@@ -119,6 +123,7 @@
 				195532B026BB0C9B008A8A97 /* LoginScreen */,
 				195532B126BB0CD4008A8A97 /* MyProject */,
 				195532B226BB0CE9008A8A97 /* MyTask */,
+				19C3590C26D8302200293E47 /* Report */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -142,6 +147,7 @@
 				19A66E8D26A2208E00A636EE /* Task.swift */,
 				19E7167126A77433005FEF0B /* TaskBrain.swift */,
 				19E7167326A8AC2E005FEF0B /* Singleton.swift */,
+				19C3590F26D83C1700293E47 /* ChartProgress.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -176,6 +182,14 @@
 			path = MyTask;
 			sourceTree = "<group>";
 		};
+		19C3590C26D8302200293E47 /* Report */ = {
+			isa = PBXGroup;
+			children = (
+				19C3590D26D8309B00293E47 /* ReportsViewController.swift */,
+			);
+			name = Report;
+			sourceTree = "<group>";
+		};
 		30222D1A708F1C68ACDF2CC3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,7 +219,6 @@
 				190F20A4268541E1006F3440 /* Frameworks */,
 				190F20A5268541E1006F3440 /* Resources */,
 				3007A69AAEA727A7DE5A6518 /* [CP] Embed Pods Frameworks */,
-				13EE649C6380CA709728489D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -266,23 +279,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		13EE649C6380CA709728489D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TaskM_Codebase/Pods-TaskM_Codebase-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TaskM_Codebase/Pods-TaskM_Codebase-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TaskM_Codebase/Pods-TaskM_Codebase-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		3007A69AAEA727A7DE5A6518 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -333,9 +329,10 @@
 				195532A826B33F6C008A8A97 /* MyTasksViewController.swift in Sources */,
 				19E7167426A8AC2E005FEF0B /* Singleton.swift in Sources */,
 				19E7167226A77433005FEF0B /* TaskBrain.swift in Sources */,
+				19C3590E26D8309B00293E47 /* ReportsViewController.swift in Sources */,
+				19C3591026D83C1700293E47 /* ChartProgress.swift in Sources */,
 				194A1A04268A9EBB005D9ADA /* SignUpViewController.swift in Sources */,
 				190F20AB268541E1006F3440 /* AppDelegate.swift in Sources */,
-				1922982D268BB8B400DAB11A /* CircularTransition.swift in Sources */,
 				19E7167A26AB54D4005FEF0B /* MyProjectsTableViewCell.swift in Sources */,
 				195532AB26B3B9CD008A8A97 /* MyTasksTableViewCell.swift in Sources */,
 				19A66E8E26A2208E00A636EE /* Task.swift in Sources */,
@@ -343,6 +340,7 @@
 				194A1A00268A55E4005D9ADA /* LoginViewController.swift in Sources */,
 				195532B426BB212E008A8A97 /* CreateNewTaskViewController.swift in Sources */,
 				190F20AD268541E1006F3440 /* SceneDelegate.swift in Sources */,
+				19C3591226D84E4A00293E47 /* CircularTransition.swift in Sources */,
 				19A66E8C26A21FF800A636EE /* Project.swift in Sources */,
 				194A1A02268A566D005D9ADA /* Constants.swift in Sources */,
 				19A66E8A26A21FB400A636EE /* User.swift in Sources */,

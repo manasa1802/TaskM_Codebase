@@ -53,7 +53,6 @@ class CreateNewProjectViewController: UIViewController, UITextFieldDelegate{
                     if let err = error{
                         print(err)
                     }else{
-                        print("Data saved successfully")
                         self.dismiss(animated: true, completion: nil)
                     }
                 }

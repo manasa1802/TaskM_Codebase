@@ -656,21 +656,32 @@
         <!--Item2-->
         <scene sceneID="aXS-Rr-qdp">
             <objects>
-                <viewController id="MzR-BV-Iud" sceneMemberID="viewController">
+                <viewController id="MzR-BV-Iud" customClass="ReportsViewController" customModule="Task__M" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8a0-om-QJV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="F9B-bF-knZ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F9B-bF-knZ">
                                 <rect key="frame" x="0.0" y="-44" width="414" height="935"/>
+                                <color key="backgroundColor" name="GreenAppColor"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reports page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8X-O5-Wi1">
-                                <rect key="frame" x="124" y="121" width="167" height="64"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dee-sk-4DB" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="23" y="104" width="374" height="402"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <nil key="textColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="REPORT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9t-a5-enx">
+                                <rect key="frame" x="151" y="44" width="112" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.10215985029999999" green="0.26270219680000001" blue="0.28302574159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ms1-FK-8Pk">
+                                <rect key="frame" x="23" y="528" width="371" height="260"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -683,10 +694,14 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item2" id="0Wc-L1-cGw"/>
                     <navigationItem key="navigationItem" id="UsW-1d-1s9"/>
+                    <connections>
+                        <outlet property="chartView" destination="dee-sk-4DB" id="ZjM-u3-GRG"/>
+                        <outlet property="reportLabel" destination="c9t-a5-enx" id="Zu5-BX-3VJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CeJ-gn-2LA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3677" y="1473"/>
+            <point key="canvasLocation" x="3676.811594202899" y="1472.5446428571429"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gY4-9D-bSe">

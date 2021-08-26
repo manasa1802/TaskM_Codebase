@@ -9,6 +9,10 @@
 import UIKit
 import Firebase
 
+protocol TrackProgressDelegate {
+    func didUpdateProgress(pending: Int, inProgress: Int, complete: Int)
+}
+
 class MyProjectsViewController: UIViewController {
     @IBOutlet weak var myProjectsView: UIView!
     @IBOutlet weak var myProjectsTableView: UITableView!
@@ -18,6 +22,7 @@ class MyProjectsViewController: UIViewController {
     var myProjectList: [Project] = []
     var db = Firestore.firestore()
     
+    var delegate: TrackProgressDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()

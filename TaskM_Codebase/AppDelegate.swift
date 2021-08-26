@@ -12,7 +12,7 @@ import GoogleSignIn
 
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
@@ -20,19 +20,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         
-        //        google sign In
-        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
-        GIDSignIn.sharedInstance().delegate = self
+//        //        google sign In
+//        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+//        GIDSignIn.sharedInstance().delegate = self
         
 
         return true
     }
     
-    func application(_ application: UIApplication, open url: URL,
-                     options: [UIApplication.OpenURLOptionsKey: Any])
-      -> Bool {
-      return GIDSignIn.sharedInstance().handle(url)
-    }
+//    func application(_ application: UIApplication, open url: URL,
+//                     options: [UIApplication.OpenURLOptionsKey: Any])
+//      -> Bool {
+//      return GIDSignIn.sharedInstance().handle(url)
+//    }
     
 //google sign in --
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
@@ -43,9 +43,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         return
       }
 
-      guard let authentication = user.authentication else { return }
-      let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
-                                                     accessToken: authentication.accessToken)
+//      guard let authentication = user.authentication else { return }
+//      let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+//                                                     accessToken: authentication.accessToken)
 
     }
 

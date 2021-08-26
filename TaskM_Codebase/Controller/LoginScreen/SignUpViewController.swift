@@ -32,8 +32,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         emailIdField.delegate = self
         passwordField.delegate = self
         //        google sign in
-        GIDSignIn.sharedInstance()?.presentingViewController = self
-        GIDSignIn.sharedInstance().signIn()
+//        GIDSignIn.sharedInstance()?.presentingViewController = self
+//        GIDSignIn.sharedInstance().signIn()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
