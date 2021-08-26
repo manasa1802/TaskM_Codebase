@@ -123,7 +123,6 @@ extension MyTasksViewController: UITableViewDelegate, UITableViewDataSource{
         cell.taskIdLabel.text = myTaskList[indexPath.row].taskId
         cell.currentTaskDocId = myTaskList[indexPath.row].taskDocumentId
         cell.statusButton.setTitle(myTaskList[indexPath.row].status, for: .normal)
-//        cell.statusButton.setImage(#imageLiteral(resourceName: "pending"), for: .normal)
 //        change status button color here
         print(myTaskList[indexPath.row].status)
         cell.statusButton.backgroundColor = buttonColor[myTaskList[indexPath.row].status]

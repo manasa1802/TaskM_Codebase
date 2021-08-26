@@ -19,9 +19,8 @@ class Singleton{
     }
     
     func getTaskId() -> String{
-        taskId += 1
+        taskId = Int.random(in: 100000...999999)
         return "T\(taskId)"
     }
-    
-    
+
 }
