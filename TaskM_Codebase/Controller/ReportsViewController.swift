@@ -33,15 +33,13 @@ class ReportsViewController: UIViewController {
     }
     
     func updateChartData(){
-         let heading = ["In Progress", "Pending", "Complete"]
+        let heading = ["In Progress", "Pending", "Complete"]
         
         let chartDataSet = PieChartDataSet(entries: chartEntry, label: nil)
         let chartData = PieChartData(dataSet: chartDataSet)
         
         let colors = [UIColor(named: "Progress"), UIColor(named: "Pending"), UIColor(named: "Complete")]
         chartDataSet.colors = colors as! [NSUIColor]
-
-       
         
         chartView.data = chartData
     }

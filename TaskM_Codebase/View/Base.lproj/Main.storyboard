@@ -515,10 +515,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d37-Nv-kSi">
-                                <rect key="frame" x="326" y="75" width="68" height="46"/>
+                                <rect key="frame" x="347" y="62" width="62" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="REPORTS">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="report_icon">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -547,7 +547,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dqM-4Q-1OT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2380" y="1652"/>
+            <point key="canvasLocation" x="2379.7101449275365" y="1651.3392857142856"/>
         </scene>
         <!--Create New Task View Controller-->
         <scene sceneID="2b3-xv-ldX">
@@ -726,6 +726,7 @@
         <image name="BackgroundImage" width="390" height="844"/>
         <image name="facebook" width="33" height="33"/>
         <image name="google" width="33" height="33"/>
+        <image name="report_icon" width="19" height="19"/>
         <image name="twitter" width="33" height="33"/>
         <namedColor name="BlueAppColor">
             <color red="0.16699999570846558" green="0.32100000977516174" blue="0.5350000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
