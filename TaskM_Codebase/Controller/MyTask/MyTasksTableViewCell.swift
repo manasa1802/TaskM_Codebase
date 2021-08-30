@@ -50,8 +50,7 @@ class MyTasksTableViewCell: UITableViewCell {
             if let err = error{
                 print(err)
             }else{
-                print(updateTo)
-                print("data update success")
+//                data succesfully saved
             }
         }
     }

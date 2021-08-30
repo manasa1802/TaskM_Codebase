@@ -58,7 +58,6 @@ class CreateNewTaskViewController: UIViewController, UITextFieldDelegate {
                 if let err = Error{
                     print("error saving data \(err)")
                 }else{
-                    print("data stored successfully")
                     self.dismiss(animated: true, completion: nil)
                 }
             }

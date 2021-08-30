@@ -21,6 +21,7 @@ struct Constants {
     static let myTasksStoryboardId = "MyTaskStoryboardID"
     static let myTaskCellId = "MyTaskCellID"
     static let createTaskID = "CreateTaskID"
+    static let reportsVCStoryboardID = "reportSID"
     
     
     struct ProjectList{

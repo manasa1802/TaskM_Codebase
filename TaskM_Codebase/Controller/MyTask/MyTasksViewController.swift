@@ -84,10 +84,6 @@ class MyTasksViewController: UIViewController {
         }
     }
 
-    func updateTask(){
-        delegate?.updateStatus(docId: "doc id", updateTo: "new string")
-    }
-    
     @IBAction func addNewTaskButtonPressed(_ sender: UIButton) {
         //        load create task vc programatically, so that you can have a hold of the doc id
 
@@ -95,20 +91,38 @@ class MyTasksViewController: UIViewController {
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: Constants.createTaskID) as! CreateNewTaskViewController
         nextViewController.currentDoc = currentDocumentID
         self.present(nextViewController, animated:true, completion:nil)
-        
     }
     
     @IBAction func reportsButtonPressed(_ sender: UIButton) {
+        var pendingValue = 0.0
+        var inProgressValue = 0.0
+        var completeValue = 0.0
+        
+        for task in myTaskList{
+            if task.status == Constants.Status.pending{
+                pendingValue += 1
+            }else if task.status == Constants.Status.inProgress{
+                inProgressValue += 1
+            }else{
+                completeValue += 1
+            }
+        }
+         
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: Constants.reportsVCStoryboardID) as! ReportsViewController
+        
+        nextViewController.pendingData.value = pendingValue
+        nextViewController.inProgressData.value = inProgressValue
+        nextViewController.completeData.value = completeValue
+        self.present(nextViewController, animated:true, completion:nil)
+        
     }
-    
 }
 
 extension MyTasksViewController: MyTaskDelegate{
     func updateStatus(docId: String, updateTo: String) {
         
     }
-    
-    
 }
 
 extension MyTasksViewController: UITableViewDelegate, UITableViewDataSource{
@@ -143,7 +157,6 @@ extension MyTasksViewController: UITableViewDelegate, UITableViewDataSource{
                 if let err = error{
                     print("Error deleting \(err)")
                 }else{
-                    print("Data deleted successfully")
                     self.myTasksTableView.reloadData()
                 }
             }

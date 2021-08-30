@@ -523,7 +523,6 @@
                                 </state>
                                 <connections>
                                     <action selector="reportsButtonPressed:" destination="OOj-sh-pGY" eventType="touchUpInside" id="74y-UR-UPL"/>
-                                    <segue destination="MzR-BV-Iud" kind="show" id="FZ0-qD-9TY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -656,13 +655,13 @@
         <!--Item2-->
         <scene sceneID="aXS-Rr-qdp">
             <objects>
-                <viewController id="MzR-BV-Iud" customClass="ReportsViewController" customModule="Task__M" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="reportSID" id="MzR-BV-Iud" customClass="ReportsViewController" customModule="Task__M" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8a0-om-QJV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F9B-bF-knZ">
-                                <rect key="frame" x="0.0" y="-44" width="414" height="935"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="901"/>
                                 <color key="backgroundColor" name="GreenAppColor"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dee-sk-4DB" customClass="PieChartView" customModule="Charts">
@@ -685,7 +684,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="F9B-bF-knZ" firstAttribute="top" secondItem="Ln7-CY-oXE" secondAttribute="top" constant="-44" id="Ci2-N0-Gdm"/>
+                            <constraint firstItem="F9B-bF-knZ" firstAttribute="top" secondItem="Ln7-CY-oXE" secondAttribute="top" id="Ci2-N0-Gdm"/>
                             <constraint firstItem="Ln7-CY-oXE" firstAttribute="bottom" secondItem="F9B-bF-knZ" secondAttribute="bottom" constant="-83" id="Vr0-dg-Jgq"/>
                             <constraint firstItem="Ln7-CY-oXE" firstAttribute="trailing" secondItem="F9B-bF-knZ" secondAttribute="trailing" id="h4X-gM-0my"/>
                             <constraint firstItem="F9B-bF-knZ" firstAttribute="leading" secondItem="Ln7-CY-oXE" secondAttribute="leading" id="x7Y-Lq-JB0"/>
