@@ -126,7 +126,6 @@ extension MyProjectsViewController: UITableViewDataSource, UITableViewDelegate{
                 if let err = error{
                     print("Error deleting \(err)")
                 }else{
-                    print("Data deleted successfully")
                     self.myProjectsTableView.reloadData()
                 }
             }
@@ -141,7 +140,6 @@ extension MyProjectsViewController: UITableViewDataSource, UITableViewDelegate{
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: Constants.myTasksStoryboardId) as! MyTasksViewController
         nextViewController.currentDocumentID = doc
         self.navigationController?.pushViewController(nextViewController, animated: true)
-//        self.present(nextViewController, animated: true, completion: nil)
         
     }
 }

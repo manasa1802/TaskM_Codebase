@@ -62,11 +62,5 @@ class CreateNewProjectViewController: UIViewController, UITextFieldDelegate{
     @IBAction func cancelButtonPressed(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
-    
-    func generateProjectId(previousId: Int) -> String{
-        projectId += 1
-        return "P\(projectId)"
-    }
-    
 }
 

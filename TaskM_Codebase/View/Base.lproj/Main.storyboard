@@ -346,17 +346,16 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MY PROJECTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9T-0O-PbT">
-                                <rect key="frame" x="20" y="89" width="374" height="69"/>
+                                <rect key="frame" x="20" y="89" width="345" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="40"/>
                                 <color key="textColor" name="BlueAppColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zx-Db-C3A">
-                                <rect key="frame" x="337" y="107" width="72" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zx-Db-C3A">
+                                <rect key="frame" x="373" y="103" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="SignOut">
+                                <state key="normal" image="SignOut">
                                     <color key="titleColor" name="BlueAppColor"/>
                                 </state>
                                 <connections>
@@ -723,9 +722,10 @@
     </scenes>
     <resources>
         <image name="BackgroundImage" width="390" height="844"/>
+        <image name="SignOut" width="80" height="80"/>
         <image name="facebook" width="33" height="33"/>
         <image name="google" width="33" height="33"/>
-        <image name="report_icon" width="19" height="19"/>
+        <image name="report_icon" width="80" height="80"/>
         <image name="twitter" width="33" height="33"/>
         <namedColor name="BlueAppColor">
             <color red="0.16699999570846558" green="0.32100000977516174" blue="0.5350000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
