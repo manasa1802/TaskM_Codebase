@@ -61,7 +61,7 @@ class MyTasksViewController: UIViewController {
         backButton.setBackgroundImage(UIImage(), for: .default)
         backButton.shadowImage = UIImage()
         backButton.isTranslucent = true
-        backButton.tintColor = UIColor.black
+        backButton.tintColor = UIColor(named: "BlueAppColor")
         backButton.backItem?.title = "Projects"
 
     }
