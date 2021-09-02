@@ -10,14 +10,13 @@ import UIKit
 import Firebase
 
 protocol MyTaskDelegate {
-    func updateStatus(docId: String, updateTo: String)
+    func updateProgress(total: Int, complete: Int)
 }
 
 class MyTasksViewController: UIViewController {
     @IBOutlet weak var myTasksView: UIView!
     @IBOutlet weak var myTasksTableView: UITableView!
     @IBOutlet weak var addNewTaskButton: UIButton!
-    
     @IBOutlet weak var reportsButton: UIButton!
     
     var buttonColor: [String: UIColor] = [
@@ -34,6 +33,12 @@ class MyTasksViewController: UIViewController {
     
     var delegate: MyTaskDelegate?
     
+    var pendingValue = 0.0
+    var inProgressValue = 0.0
+    var completeValue = 0.0
+    
+    var updateProgressManager = MyProjectsViewController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,6 +50,7 @@ class MyTasksViewController: UIViewController {
         myTasksTableView.register(UINib(nibName: "MyTasksTableViewCell", bundle: nil), forCellReuseIdentifier: Constants.myTaskCellId)
         myTasksTableView.delegate = self
         myTasksTableView.dataSource = self
+//        getReport()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -94,10 +100,6 @@ class MyTasksViewController: UIViewController {
     }
     
     @IBAction func reportsButtonPressed(_ sender: UIButton) {
-        var pendingValue = 0.0
-        var inProgressValue = 0.0
-        var completeValue = 0.0
-        
         for task in myTaskList{
             if task.status == Constants.Status.pending{
                 pendingValue += 1
@@ -107,22 +109,30 @@ class MyTasksViewController: UIViewController {
                 completeValue += 1
             }
         }
-         
+//        getReport()
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: Constants.reportsVCStoryboardID) as! ReportsViewController
-        
         nextViewController.pendingData.value = pendingValue
         nextViewController.inProgressData.value = inProgressValue
         nextViewController.completeData.value = completeValue
         self.present(nextViewController, animated:true, completion:nil)
         
     }
-}
-
-extension MyTasksViewController: MyTaskDelegate{
-    func updateStatus(docId: String, updateTo: String) {
-        
-    }
+    
+//    func getReport(){
+//        for task in myTaskList{
+//            if task.status == Constants.Status.pending{
+//                pendingValue += 1
+//            }else if task.status == Constants.Status.inProgress{
+//                inProgressValue += 1
+//            }else{
+//                completeValue += 1
+//            }
+//        }
+//        print("after report")
+//        print("\(completeValue)/\(myTaskList.count)")
+//        self.delegate?.updateProgress(total: (myTaskList.count), complete: Int(completeValue))
+//    }
 }
 
 extension MyTasksViewController: UITableViewDelegate, UITableViewDataSource{

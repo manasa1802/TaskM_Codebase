@@ -9,9 +9,6 @@
 import UIKit
 import Firebase
 
-protocol TrackProgressDelegate {
-    func didUpdateProgress(pending: Int, inProgress: Int, complete: Int)
-}
 
 class MyProjectsViewController: UIViewController {
     @IBOutlet weak var myProjectsView: UIView!
@@ -22,7 +19,10 @@ class MyProjectsViewController: UIViewController {
     var myProjectList: [Project] = []
     var db = Firestore.firestore()
     
-    var delegate: TrackProgressDelegate?
+    var updatedTotalTask = 0
+    var updatedcompletedTask = 0
+    
+//    var delegate: MyTaskDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -99,6 +99,14 @@ class MyProjectsViewController: UIViewController {
     }
 }
 
+
+//extension MyProjectsViewController: MyTaskDelegate{
+//    func updateProgress(total: Int, complete: Int) {
+//        updatedTotalTask = total
+//        updatedcompletedTask = complete
+//    }
+//}
+
 extension MyProjectsViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return myProjectList.count
@@ -109,6 +117,9 @@ extension MyProjectsViewController: UITableViewDataSource, UITableViewDelegate{
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.projectCellId, for: indexPath) as! MyProjectsTableViewCell
         cell.projectNameLabel.text = myProjectList[indexPath.row].projectName
         cell.projectDescriptionLabel.text = myProjectList[indexPath.row].projectDescription
+//        print("\(updatedcompletedTask)/\(updatedTotalTask)")
+//        cell.progressLabel.text = "\(updatedcompletedTask)/\(updatedTotalTask)"
+        
         return cell
     }
     
@@ -143,3 +154,5 @@ extension MyProjectsViewController: UITableViewDataSource, UITableViewDelegate{
         
     }
 }
+
+

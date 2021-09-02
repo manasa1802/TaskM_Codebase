@@ -15,14 +15,21 @@ class MyProjectsTableViewCell: UITableViewCell {
     @IBOutlet weak var progressLabel: UILabel!
     @IBOutlet weak var cellUIView: UIView!
     
+    var completedTasks = 0
+    var totalTasks = 0
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
         cellUIView.layer.cornerRadius = 10
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-
 }
+
+
